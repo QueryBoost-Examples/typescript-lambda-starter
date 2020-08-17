@@ -1,0 +1,10 @@
+schema:
+  - https://api.queryboost.com/mocks:
+      headers:
+        Authorization: ${MOCK_API_KEY}
+documents: ./src/graphql/*.ts
+generates:
+  ./src/types/types.ts:
+    plugins:
+      - typescript
+      - typescript-operations

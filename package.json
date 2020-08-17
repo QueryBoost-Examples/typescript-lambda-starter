@@ -1,0 +1,27 @@
+{
+  "name": "lambda-typescript-starter",
+  "version": "1.0.0",
+  "description": "A Typescript starter for using AWS Lambda to execute calls to the QueryBoost API",
+  "main": "index.js",
+  "author": "queryboost.com",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "aws-lambda": "^1.0.6",
+    "graphql": "^15.3.0",
+    "graphql-request": "3.0.0-next.4",
+    "graphql-tag": "^2.11.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.17.6",
+    "@graphql-codegen/typescript": "^1.17.6",
+    "@graphql-codegen/typescript-operations": "^1.17.6",
+    "@types/aws-lambda": "^8.10.59",
+    "dotenv": "^8.2.0",
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "codegen": "graphql-codegen -r dotenv/config --config ./codegen.yml",
+    "build": "tsc"
+  }
+}

@@ -4,7 +4,7 @@ import { GET_CUSTOMERS } from './graphql/query';
 import { GetCustomersQuery, GetCustomersQueryVariables } from './types/types';
 
 //Hander for triggering the Lambda from an AWS Cloudwatch event
-export const handler: ScheduledHandler = async (event) => {
+export const eventHandler: ScheduledHandler = async (event) => {
   //event contains the time that Cloudwatch triggered the lambda. Can be used as an argument in queries.
   console.log(event.time);
 
@@ -39,6 +39,6 @@ export const handler: ScheduledHandler = async (event) => {
 };
 
 //Generic Handler for  Lambda function
-/* export const handler: Handler = async (event, context) => {
+/* export const lambdaHandler: Handler = async (event, context) => {
 
 } */

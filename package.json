@@ -18,6 +18,8 @@
     "@graphql-codegen/typescript-operations": "^1.17.6",
     "@types/aws-lambda": "^8.10.59",
     "dotenv": "^8.2.0",
+    "serverless-bundle": "^3.0.0",
+    "serverless-dotenv": "^1.0.0-beta.2",
     "typescript": "^3.9.7"
   },
   "scripts": {

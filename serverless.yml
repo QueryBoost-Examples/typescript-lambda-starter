@@ -6,9 +6,8 @@ package:
   individually: true
 
 plugins:
-  - serverless-bundle # Package our functions with Webpack
-  - serverless-offline
   - serverless-dotenv-plugin # Load .env as environment variables
+  - serverless-bundle # Package our functions with Webpack
 
 provider:
   name: aws
@@ -19,6 +18,12 @@ provider:
   # To add your Live API Key add to your .env file and to here
   environment:
     MOCK_API_KEY: ${env:MOCK_API_KEY}
+
+#remove to use ESLint when deploying
+custom:
+  bundle:
+    linting: false
+    sourcemaps: false
 
 functions:
   #name for your lambda function
